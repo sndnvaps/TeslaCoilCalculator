@@ -50,9 +50,7 @@ namespace TeslaCoilCalculator
             }
 
              OutputBox.Text = OutputText.ToString();
-             OutputBox.Update();
-
-            
+             OutputBox.Update();  
 
         }
 
@@ -63,7 +61,15 @@ namespace TeslaCoilCalculator
 
         private void InputBox_TextChanged(object sender, EventArgs e)
         {
-            InputText = Convert.ToDouble(InputBox.Text); //将输入修改为double 
+            try
+            {
+
+
+                InputText = Convert.ToDouble(InputBox.Text); //将输入修改为double 
+            }
+            catch(Exception ex) {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
