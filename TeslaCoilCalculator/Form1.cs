@@ -31,7 +31,8 @@ namespace TeslaCoilCalculator
         private double OutputText;
         private double cm2inch   = 5.08; // cm / 2.54  -> 2*2.54 
         private double inch2cm   = 2.0; // 2.54 * cm 
-        private const double Mask = 2.83915; 
+        private const double Mask = 2.83915;
+        private Form2 NewForm2; //新建一个窗口，用于测试
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -98,6 +99,12 @@ namespace TeslaCoilCalculator
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void NewForm_Click(object sender, EventArgs e)
+        {
+            NewForm2 = new Form2();
+            NewForm2.ShowDialog(); //显示一个新窗口，在父窗口之上
         }
 
      

@@ -36,6 +36,7 @@
             this.OutputBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NewForm = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -120,11 +121,22 @@
             this.groupBox1.Text = "选择计算单位";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // NewForm
+            // 
+            this.NewForm.Location = new System.Drawing.Point(25, 172);
+            this.NewForm.Name = "NewForm";
+            this.NewForm.Size = new System.Drawing.Size(75, 23);
+            this.NewForm.TabIndex = 9;
+            this.NewForm.Text = "计算次级箍数";
+            this.NewForm.UseVisualStyleBackColor = true;
+            this.NewForm.Click += new System.EventHandler(this.NewForm_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(291, 175);
+            this.ClientSize = new System.Drawing.Size(310, 270);
+            this.Controls.Add(this.NewForm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.OutputBox);
             this.Controls.Add(this.Cal);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.TextBox OutputBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button NewForm;
     }
 }
 
