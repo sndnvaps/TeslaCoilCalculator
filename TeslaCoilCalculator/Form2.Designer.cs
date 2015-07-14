@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.NewFormTest = new System.Windows.Forms.Button();
-            this.Height = new System.Windows.Forms.TextBox();
+            this.IHeight = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.WireDiameter = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -39,11 +39,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.SecCap = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.TextBox_SecInduct = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // NewFormTest
             // 
-            this.NewFormTest.Location = new System.Drawing.Point(25, 171);
+            this.NewFormTest.Location = new System.Drawing.Point(18, 150);
             this.NewFormTest.Name = "NewFormTest";
             this.NewFormTest.Size = new System.Drawing.Size(75, 23);
             this.NewFormTest.TabIndex = 0;
@@ -51,13 +53,13 @@
             this.NewFormTest.UseVisualStyleBackColor = true;
             this.NewFormTest.Click += new System.EventHandler(this.NewFormTest_Click);
             // 
-            // Height
+            // IHeight
             // 
-            this.Height.Location = new System.Drawing.Point(155, 23);
-            this.Height.Name = "Height";
-            this.Height.Size = new System.Drawing.Size(100, 21);
-            this.Height.TabIndex = 1;
-            this.Height.TextChanged += new System.EventHandler(this.Height_TextChanged);
+            this.IHeight.Location = new System.Drawing.Point(155, 23);
+            this.IHeight.Name = "IHeight";
+            this.IHeight.Size = new System.Drawing.Size(100, 21);
+            this.IHeight.TabIndex = 1;
+            this.IHeight.TextChanged += new System.EventHandler(this.Height_TextChanged);
             // 
             // label1
             // 
@@ -87,7 +89,7 @@
             // 
             // CoilTurns
             // 
-            this.CoilTurns.Location = new System.Drawing.Point(227, 208);
+            this.CoilTurns.Location = new System.Drawing.Point(227, 173);
             this.CoilTurns.Name = "CoilTurns";
             this.CoilTurns.Size = new System.Drawing.Size(100, 21);
             this.CoilTurns.TabIndex = 5;
@@ -95,7 +97,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(153, 211);
+            this.label3.Location = new System.Drawing.Point(158, 176);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(53, 12);
             this.label3.TabIndex = 6;
@@ -135,11 +137,30 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "次级寄生电容(pf)";
             // 
+            // TextBox_SecInduct
+            // 
+            this.TextBox_SecInduct.Location = new System.Drawing.Point(227, 215);
+            this.TextBox_SecInduct.Name = "TextBox_SecInduct";
+            this.TextBox_SecInduct.Size = new System.Drawing.Size(100, 21);
+            this.TextBox_SecInduct.TabIndex = 11;
+            this.TextBox_SecInduct.TextChanged += new System.EventHandler(this.TextBox_SecInduct_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(141, 218);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 12);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "次级电感(μH)";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 313);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.TextBox_SecInduct);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.SecCap);
             this.Controls.Add(this.label4);
@@ -149,7 +170,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.WireDiameter);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.Height);
+            this.Controls.Add(this.IHeight);
             this.Controls.Add(this.NewFormTest);
             this.Name = "Form2";
             this.Text = "计算次级线圈电感";
@@ -162,7 +183,7 @@
         #endregion
 
         private System.Windows.Forms.Button NewFormTest;
-        private System.Windows.Forms.TextBox Height;
+        private System.Windows.Forms.TextBox IHeight;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox WireDiameter;
         private System.Windows.Forms.Label label2;
@@ -172,5 +193,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox SecCap;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox TextBox_SecInduct;
+        private System.Windows.Forms.Label label6;
     }
 }
