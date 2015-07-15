@@ -72,7 +72,7 @@
             this.Controls.Add(this.TopCap);
             this.Controls.Add(this.NewForm);
             this.Name = "Form1";
-            this.Text = "计算球形的电容";
+            this.Text = "特斯拉线圈计算器";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
