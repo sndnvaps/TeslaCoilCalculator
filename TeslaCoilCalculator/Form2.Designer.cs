@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.TextBox_SecInduct = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.CloseButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NewFormTest
@@ -154,11 +155,22 @@
             this.label6.TabIndex = 12;
             this.label6.Text = "次级电感(μH)";
             // 
+            // CloseButton
+            // 
+            this.CloseButton.Location = new System.Drawing.Point(12, 251);
+            this.CloseButton.Name = "CloseButton";
+            this.CloseButton.Size = new System.Drawing.Size(75, 23);
+            this.CloseButton.TabIndex = 13;
+            this.CloseButton.Text = "关闭";
+            this.CloseButton.UseVisualStyleBackColor = true;
+            this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 313);
+            this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TextBox_SecInduct);
             this.Controls.Add(this.label5);
@@ -195,5 +207,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox TextBox_SecInduct;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button CloseButton;
     }
 }
