@@ -47,6 +47,12 @@ namespace TeslaCoilCalculator
         private double FormHeight; //绕线的高度
         private double OutputSecCap; //用于输出次级寄生电容 
         private double OutputSecInduct; //用于输出次级电感 μH
+        private double OutputResonant; //用于输出谐振频率 Hz 
+
+        //1H=1000000μH,1μH=0.0000001H
+
+        //1F=10^6uF=10^12pF
+        //1F=10^12pF
        // ((((Secondary Coil Turns ^2) * ((Secondary Form Diameter/2)^2))/((9 * (Secondary Form Diameter / 2)) + (10 * Secondary Wire Winding Height)))); 
         public Form2()
         {
@@ -70,14 +76,19 @@ namespace TeslaCoilCalculator
 
             OutputSecInduct = ((((System.Math.Pow(Output, 2.0)) * (System.Math.Pow(FormDiameter / 2.0, 2)))) / ((9 * (FormDiameter / 2)) + (10 * FormHeight)));// * 0.001 * 13.72; //miss Secondary Induct Adjust 
             
+            //1/(2*pi*sqrt(L*C)) 
+            OutputResonant = 1 / (2 * System.Math.PI * System.Math.Sqrt((OutputSecCap * System.Math.Pow(10, -12.0)) *
+                OutputSecInduct * System.Math.Pow(10, -6.0)));
             
             CoilTurns.Text = Output.ToString();
             SecCap.Text = OutputSecCap.ToString();
-            TextBox_SecInduct.Text = OutputSecInduct.ToString(); 
+            TextBox_SecInduct.Text = OutputSecInduct.ToString();
+            TextBoxResonant.Text = OutputResonant.ToString();
 
             SecCap.Update();
             CoilTurns.Update();
             TextBox_SecInduct.Update();
+            TextBoxResonant.Update();
         }
 
         private void Height_TextChanged(object sender, EventArgs e) //绕线的高度，输入为厘米
@@ -109,6 +120,12 @@ namespace TeslaCoilCalculator
         private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void TextBoxResonant_TextChanged(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }

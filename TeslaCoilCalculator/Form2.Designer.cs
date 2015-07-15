@@ -42,6 +42,8 @@
             this.TextBox_SecInduct = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.CloseButton = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.TextBoxResonant = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // NewFormTest
@@ -165,11 +167,30 @@
             this.CloseButton.UseVisualStyleBackColor = true;
             this.CloseButton.Click += new System.EventHandler(this.CloseButton_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(117, 316);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(137, 12);
+            this.label7.TabIndex = 14;
+            this.label7.Text = "不加顶端的谐振频率(Hz)";
+            // 
+            // TextBoxResonant
+            // 
+            this.TextBoxResonant.Location = new System.Drawing.Point(272, 313);
+            this.TextBoxResonant.Name = "TextBoxResonant";
+            this.TextBoxResonant.Size = new System.Drawing.Size(100, 21);
+            this.TextBoxResonant.TabIndex = 15;
+            this.TextBoxResonant.TextChanged += new System.EventHandler(this.TextBoxResonant_TextChanged);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(407, 313);
+            this.ClientSize = new System.Drawing.Size(425, 406);
+            this.Controls.Add(this.TextBoxResonant);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.TextBox_SecInduct);
@@ -208,5 +229,7 @@
         private System.Windows.Forms.TextBox TextBox_SecInduct;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button CloseButton;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TextBoxResonant;
     }
 }
