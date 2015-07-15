@@ -27,84 +27,28 @@ namespace TeslaCoilCalculator
         {
             InitializeComponent();
         }
-        private double InputText;
-        private double OutputText;
-        private double cm2inch   = 5.08; // cm / 2.54  -> 2*2.54 
-        private double inch2cm   = 2.0; // 2.54 * cm 
-        private const double Mask = 2.83915;
-        private Form2 NewForm2; //新建一个窗口，用于测试
+        private Form2 NewForm2; //新建一个窗口，用于计算次级线圈参数
+        private Form3 NewForm3; //新建一个窗口,用于计算顶端电容
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-            if (CB_Cm.Checked.Equals(true))
-            {
-                OutputText = Mask * (InputText / cm2inch); //default is cm 
-            }
-            else if (CB_Inch.Checked.Equals(true))
-            {
-                OutputText = Mask * (InputText / inch2cm); //inch 
-            }
-
-             OutputBox.Text = OutputText.ToString();
-             OutputBox.Update();  
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e) //OutputBox
-        {
-         
-        }
-
-        private void InputBox_TextChanged(object sender, EventArgs e)
-        {
-            try
-            {
-
-
-                InputText = Convert.ToDouble(InputBox.Text); //将输入修改为double 
-            }
-            catch(Exception ex) {
-                MessageBox.Show(ex.Message);
-            }
-
-        }
-
-        private void CB_Inch_CheckedChanged(object sender, EventArgs e)
-        {
-            if (CB_Inch.Checked.Equals(true))
-            {
-                CB_Cm.Checked = false;
-               
-            }
-        }
-
-        private void CB_Cm_CheckedChanged(object sender, EventArgs e)
-        {
-            if (CB_Cm.Checked.Equals(true))
-            {
-                CB_Inch.Checked = false;
-            }
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NewForm_Click(object sender, EventArgs e)
+         private void NewForm_Click(object sender, EventArgs e)
         {
             NewForm2 = new Form2();
             NewForm2.ShowDialog(); //显示一个新窗口，在父窗口之上
+        }
+
+        private void TopCap_Click(object sender, EventArgs e)
+        {
+            NewForm3 = new Form3();
+            NewForm3.Show();// 显示一个窗口,在父窗口之上
+        }
+
+        private void CloseForm1_Click(object sender, EventArgs e)
+        {
+            System.Environment.Exit(0);   //退出进程
         }
 
      
