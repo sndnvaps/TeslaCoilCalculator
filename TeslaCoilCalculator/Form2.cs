@@ -42,7 +42,7 @@ namespace TeslaCoilCalculator
     public partial class Form2 : Form
     {
         public double  Output;
-        private double MagnetWireDiameter = 0.01063; // 次级线径 0.27mm 
+        private double MagnetWireDiameter;// = 0.01063; // 次级线径 0.27mm 
         private double FormDiameter; //管径 输入为厘米 
         private double FormHeight; //绕线的高度
         private double OutputSecCap; //用于输出次级寄生电容 
@@ -61,7 +61,9 @@ namespace TeslaCoilCalculator
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            this.FormHeight = 0.0;
+            this.FormDiameter = 0.0;
+            this.MagnetWireDiameter = 0.0;
         }
 
         private void NewFormTest_Click(object sender, EventArgs e)
@@ -77,8 +79,7 @@ namespace TeslaCoilCalculator
             OutputSecInduct = ((((System.Math.Pow(Output, 2.0)) * (System.Math.Pow(FormDiameter / 2.0, 2)))) / ((9 * (FormDiameter / 2)) + (10 * FormHeight)));// * 0.001 * 13.72; //miss Secondary Induct Adjust 
             
             //1/(2*pi*sqrt(L*C)) 
-            OutputResonant = 1 / (2 * System.Math.PI * System.Math.Sqrt((OutputSecCap * System.Math.Pow(10, -12.0)) *
-                OutputSecInduct * System.Math.Pow(10, -6.0)));
+            OutputResonant = 1 / (2 * System.Math.PI * System.Math.Sqrt((OutputSecCap * System.Math.Pow(10, -12.0)) * (OutputSecInduct * System.Math.Pow(10, -6.0))));
             
             CoilTurns.Text = Output.ToString();
             SecCap.Text = OutputSecCap.ToString();
@@ -93,7 +94,14 @@ namespace TeslaCoilCalculator
 
         private void Height_TextChanged(object sender, EventArgs e) //绕线的高度，输入为厘米
         {
-            FormHeight = Convert.ToDouble(IHeight.Text) * (1 / 2.54); //将厘米转换成 英寸
+            if (IHeight.Text == "")
+            {
+                FormHeight = 0.0;
+            }
+            else
+            {
+                FormHeight = Convert.ToDouble(IHeight.Text) * (1 / 2.54); //将厘米转换成 英寸
+            }
         }
 
         private void WireDiameter_TextChanged(object sender, EventArgs e)

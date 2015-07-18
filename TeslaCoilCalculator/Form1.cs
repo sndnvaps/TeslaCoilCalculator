@@ -29,6 +29,7 @@ namespace TeslaCoilCalculator
         }
         private Form2 NewForm2; //新建一个窗口，用于计算次级线圈参数
         private Form3 NewForm3; //新建一个窗口,用于计算顶端电容
+        private Form5 NewForm5; //用于计算初始线圈的参数 
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -46,10 +47,18 @@ namespace TeslaCoilCalculator
             NewForm3.Show();// 显示一个窗口,在父窗口之上
         }
 
+        private void PrimaryCoilButton_Click(object sender, EventArgs e)
+        {
+            NewForm5 = new Form5();
+            NewForm5.Show(); //显示一个窗口,在父窗口之上
+        }
+
         private void CloseForm1_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(0);   //退出进程
         }
+
+    
 
      
 

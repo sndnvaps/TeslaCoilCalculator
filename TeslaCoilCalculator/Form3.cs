@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+//用于计算次级线圈的 顶端的球形的对地等效电容 (pf) 
+
 namespace TeslaCoilCalculator
 {
     public partial class Form3 : Form

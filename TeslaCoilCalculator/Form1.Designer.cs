@@ -31,6 +31,7 @@
             this.NewForm = new System.Windows.Forms.Button();
             this.TopCap = new System.Windows.Forms.Button();
             this.CloseForm1 = new System.Windows.Forms.Button();
+            this.PrimaryCoilButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NewForm
@@ -63,11 +64,22 @@
             this.CloseForm1.UseVisualStyleBackColor = true;
             this.CloseForm1.Click += new System.EventHandler(this.CloseForm1_Click);
             // 
+            // PrimaryCoilButton
+            // 
+            this.PrimaryCoilButton.Location = new System.Drawing.Point(12, 103);
+            this.PrimaryCoilButton.Name = "PrimaryCoilButton";
+            this.PrimaryCoilButton.Size = new System.Drawing.Size(90, 51);
+            this.PrimaryCoilButton.TabIndex = 12;
+            this.PrimaryCoilButton.Text = "计算初级参数";
+            this.PrimaryCoilButton.UseVisualStyleBackColor = true;
+            this.PrimaryCoilButton.Click += new System.EventHandler(this.PrimaryCoilButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 270);
+            this.Controls.Add(this.PrimaryCoilButton);
             this.Controls.Add(this.CloseForm1);
             this.Controls.Add(this.TopCap);
             this.Controls.Add(this.NewForm);
@@ -83,6 +95,7 @@
         private System.Windows.Forms.Button NewForm;
         private System.Windows.Forms.Button TopCap;
         private System.Windows.Forms.Button CloseForm1;
+        private System.Windows.Forms.Button PrimaryCoilButton;
     }
 }
 
