@@ -157,6 +157,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrimaryCoilForm";
             this.Text = "计算初始线圈参数";
             this.Load += new System.EventHandler(this.PrimaryCoilForm_Load);

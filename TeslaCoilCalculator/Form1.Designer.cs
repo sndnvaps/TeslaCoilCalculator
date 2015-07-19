@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.NewForm = new System.Windows.Forms.Button();
             this.TopCap = new System.Windows.Forms.Button();
             this.CloseForm1 = new System.Windows.Forms.Button();
@@ -83,6 +84,7 @@
             this.Controls.Add(this.CloseForm1);
             this.Controls.Add(this.TopCap);
             this.Controls.Add(this.NewForm);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "特斯拉线圈计算器";
             this.Load += new System.EventHandler(this.Form1_Load);

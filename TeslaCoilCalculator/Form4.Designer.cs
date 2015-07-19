@@ -177,6 +177,7 @@
             this.Controls.Add(this.btnCal);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnClose);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form4";
             this.Text = "初始线圈螺丝状计算器";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
