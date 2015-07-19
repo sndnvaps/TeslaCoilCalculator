@@ -43,7 +43,7 @@ namespace TeslaCoilCalculator
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            CoilInerDiameter = Convert.ToDouble(textBox1.Text) * (1 / 2.54); //厘米转换成英寸
+            CoilInerDiameter = Convert.ToDouble(textBox1.Text) * (1 / 25.4); //毫米转换成英寸
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -53,12 +53,12 @@ namespace TeslaCoilCalculator
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            MagnetWireDiameter = Convert.ToDouble(textBox3.Text) * (1 / 2.54); //获取线径
+            MagnetWireDiameter = Convert.ToDouble(textBox3.Text) * (1 / 25.4); //获取线径
         }
 
         private void textBox4_TextChanged(object sender, EventArgs e)
         {
-            CoilSpace = Convert.ToDouble(textBox4.Text) * (1 / 2.54); //获取匝间距,单位使用厘米
+            CoilSpace = Convert.ToDouble(textBox4.Text) * (1 / 25.4); //获取匝间距,单位使用厘米
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -70,8 +70,8 @@ namespace TeslaCoilCalculator
         {
             // A = (D1 + N*(W +S))/2 --> (CoilInerDiameter + CoilTurns *(MagnetWireDiameter + CoilSpace))/2 
             ConstA = (CoilInerDiameter + CoilTurns * (MagnetWireDiameter + CoilSpace)) / 2;
-            //L = ((Math.Pow(CoilInerDiameter,2.0) * (Math.Pow(ConstA,2.0))/(30 * ConstA - 11 * CoilInerDiameter)
-            Output = ((Math.Pow(CoilInerDiameter, 2.0)) * (Math.Pow(ConstA, 2.0))) / (30 * ConstA - 11 * CoilInerDiameter);
+            //L = ((Math.Pow(CoilTurns,2.0) * (Math.Pow(ConstA,2.0))/(30 * ConstA - 11 * CoilInerDiameter)
+            Output = ((Math.Pow(CoilTurns, 2.0)) * (Math.Pow(ConstA, 2.0))) / (30 * ConstA - 11 * CoilInerDiameter);
             textBox5.Text = Output.ToString();
         }
 

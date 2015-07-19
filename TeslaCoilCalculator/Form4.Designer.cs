@@ -121,7 +121,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 12);
             this.label1.TabIndex = 8;
-            this.label1.Text = "(D1)线圈内径(cm)";
+            this.label1.Text = "(D1)线圈内径(mm)";
             // 
             // label2
             // 
@@ -139,7 +139,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 12);
             this.label3.TabIndex = 10;
-            this.label3.Text = "(W)线径(cm)";
+            this.label3.Text = "(W)线径(mm)";
             // 
             // label4
             // 
@@ -148,7 +148,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 12);
             this.label4.TabIndex = 11;
-            this.label4.Text = "(S)匝间距(cm)";
+            this.label4.Text = "(S)匝间距(mm)";
             // 
             // label5
             // 
