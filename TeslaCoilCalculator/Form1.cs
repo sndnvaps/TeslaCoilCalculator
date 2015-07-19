@@ -32,6 +32,8 @@ namespace TeslaCoilCalculator
         private Form2 NewForm2; //新建一个窗口，用于计算次级线圈参数
         private Form3 NewForm3; //新建一个窗口,用于计算顶端电容
         private Form5 NewForm5; //用于计算初始线圈的参数 
+        private SparkLength NewSpartLength; //用于估算功率与电弧长度
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -58,6 +60,13 @@ namespace TeslaCoilCalculator
         private void CloseForm1_Click(object sender, EventArgs e)
         {
             System.Environment.Exit(0);   //退出进程
+        }
+
+        private void SparkLength_Click(object sender, EventArgs e) //用于估算电弧的长度
+        {
+            NewSpartLength = new SparkLength();
+            NewSpartLength.Show();
+
         }
 
     

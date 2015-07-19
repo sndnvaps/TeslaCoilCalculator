@@ -33,6 +33,7 @@
             this.TopCap = new System.Windows.Forms.Button();
             this.CloseForm1 = new System.Windows.Forms.Button();
             this.PrimaryCoilButton = new System.Windows.Forms.Button();
+            this.SparkLength = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NewForm
@@ -75,11 +76,22 @@
             this.PrimaryCoilButton.UseVisualStyleBackColor = true;
             this.PrimaryCoilButton.Click += new System.EventHandler(this.PrimaryCoilButton_Click);
             // 
+            // SparkLength
+            // 
+            this.SparkLength.Location = new System.Drawing.Point(139, 103);
+            this.SparkLength.Name = "SparkLength";
+            this.SparkLength.Size = new System.Drawing.Size(90, 51);
+            this.SparkLength.TabIndex = 13;
+            this.SparkLength.Text = "估算电弧长度";
+            this.SparkLength.UseVisualStyleBackColor = true;
+            this.SparkLength.Click += new System.EventHandler(this.SparkLength_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(261, 270);
+            this.Controls.Add(this.SparkLength);
             this.Controls.Add(this.PrimaryCoilButton);
             this.Controls.Add(this.CloseForm1);
             this.Controls.Add(this.TopCap);
@@ -98,6 +110,7 @@
         private System.Windows.Forms.Button TopCap;
         private System.Windows.Forms.Button CloseForm1;
         private System.Windows.Forms.Button PrimaryCoilButton;
+        private System.Windows.Forms.Button SparkLength;
     }
 }
 
