@@ -40,6 +40,10 @@ namespace TeslaCoilCalculator
         {
             InitializeComponent();
         }
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -79,5 +83,7 @@ namespace TeslaCoilCalculator
         {
             this.Close(); //关闭当前窗口
         }
+
+       
     }
 }

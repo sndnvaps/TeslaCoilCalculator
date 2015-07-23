@@ -86,9 +86,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(29, 106);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 12);
+            this.label3.Size = new System.Drawing.Size(125, 12);
             this.label3.TabIndex = 4;
-            this.label3.Text = "(W+S)匝间距+线径";
+            this.label3.Text = "(W+S)匝间距+线径(mm)";
             // 
             // textBox1
             // 

@@ -71,7 +71,7 @@ namespace TeslaCoilCalculator
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            CoilSpace = Convert.ToDouble(textBox3.Text) * (1 / 2.54); //将厘米转换成英寸 ,预算是使用6mm 铜管,即0.6cm 
+            CoilSpace = Convert.ToDouble(textBox3.Text) * (1 / 25.4); //将毫米转换成英寸 ,预算是使用6mm 铜管,即0.6cm 
         }
 
         private void tbOutput_TextChanged(object sender, EventArgs e)
