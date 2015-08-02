@@ -34,6 +34,8 @@
             this.CloseForm1 = new System.Windows.Forms.Button();
             this.PrimaryCoilButton = new System.Windows.Forms.Button();
             this.SparkLength = new System.Windows.Forms.Button();
+            this.btnTCCDC = new System.Windows.Forms.Button();
+            this.btnAbout = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NewForm
@@ -58,7 +60,7 @@
             // 
             // CloseForm1
             // 
-            this.CloseForm1.Location = new System.Drawing.Point(89, 224);
+            this.CloseForm1.Location = new System.Drawing.Point(12, 287);
             this.CloseForm1.Name = "CloseForm1";
             this.CloseForm1.Size = new System.Drawing.Size(75, 23);
             this.CloseForm1.TabIndex = 11;
@@ -86,11 +88,33 @@
             this.SparkLength.UseVisualStyleBackColor = true;
             this.SparkLength.Click += new System.EventHandler(this.SparkLength_Click);
             // 
+            // btnTCCDC
+            // 
+            this.btnTCCDC.Location = new System.Drawing.Point(12, 186);
+            this.btnTCCDC.Name = "btnTCCDC";
+            this.btnTCCDC.Size = new System.Drawing.Size(90, 51);
+            this.btnTCCDC.TabIndex = 14;
+            this.btnTCCDC.Text = "初级和次级耦合度计算";
+            this.btnTCCDC.UseVisualStyleBackColor = true;
+            this.btnTCCDC.Click += new System.EventHandler(this.btnTCCDC_Click);
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Location = new System.Drawing.Point(139, 287);
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(75, 23);
+            this.btnAbout.TabIndex = 15;
+            this.btnAbout.Text = "关于";
+            this.btnAbout.UseVisualStyleBackColor = true;
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(261, 270);
+            this.ClientSize = new System.Drawing.Size(261, 339);
+            this.Controls.Add(this.btnAbout);
+            this.Controls.Add(this.btnTCCDC);
             this.Controls.Add(this.SparkLength);
             this.Controls.Add(this.PrimaryCoilButton);
             this.Controls.Add(this.CloseForm1);
@@ -111,6 +135,8 @@
         private System.Windows.Forms.Button CloseForm1;
         private System.Windows.Forms.Button PrimaryCoilButton;
         private System.Windows.Forms.Button SparkLength;
+        private System.Windows.Forms.Button btnTCCDC;
+        private System.Windows.Forms.Button btnAbout;
     }
 }
 

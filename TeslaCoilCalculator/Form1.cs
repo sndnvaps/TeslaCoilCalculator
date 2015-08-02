@@ -33,6 +33,8 @@ namespace TeslaCoilCalculator
         private Form3 NewForm3; //新建一个窗口,用于计算顶端电容
         private Form5 NewForm5; //用于计算初始线圈的参数 
         private SparkLength NewSpartLength; //用于估算功率与电弧长度
+        private TCCDC NewTCCDC; // 特斯拉线圈耦合度计算器
+        private About NewAbout; //功能说明 
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -67,6 +69,18 @@ namespace TeslaCoilCalculator
             NewSpartLength = new SparkLength();
             NewSpartLength.Show();
 
+        }
+
+        private void btnTCCDC_Click(object sender, EventArgs e) //计算特斯拉线圈耦合度 
+        {
+            NewTCCDC = new TCCDC();
+            NewTCCDC.Show();
+        }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            NewAbout = new About();
+            NewAbout.Show();
         }
 
     
