@@ -26,7 +26,6 @@ namespace TeslaCoilCalculator
     public partial class SparkLength : Form
     {
 
-        private double Power; //功率 P
         private double SpartLength; // 电弧长度  
         private bool IsInch = false; //判断当前单位是否为英寸,默认为厘米
         public SparkLength()
@@ -49,7 +48,6 @@ namespace TeslaCoilCalculator
         {
             //当textBox1.Text 不为空时,表示输入的为 长度,
             //但分为两种状态,一种为inch,一种为cm 
-            double length; 
             double power;
 
                         
