@@ -97,5 +97,24 @@ namespace TeslaCoilCalculator
         private double LReverse;
         private double L1;
         private double L2;
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            
+        }
+
+        private void TCCDC_Load(object sender, EventArgs e)
+        {
+            // Set up the delays for the ToolTip.
+            toolTip1.AutoPopDelay = 5000;
+            toolTip1.InitialDelay = 1000;
+            toolTip1.ReshowDelay = 500;
+            // Force the ToolTip text to be displayed whether or not the form is active.
+            toolTip1.ShowAlways = true;
+
+            // Set up the ToolTip text for the Button and Checkbox.
+            toolTip1.SetToolTip(this.btnCal, "计算初始与初级线圈的耦合度");
+            //toolTip1.SetToolTip(this.checkBox1, "My checkBox1"); 
+        }
     }
 }

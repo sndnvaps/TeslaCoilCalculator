@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tbForward = new System.Windows.Forms.TextBox();
             this.tbReverse = new System.Windows.Forms.TextBox();
             this.tbL1 = new System.Windows.Forms.TextBox();
@@ -46,6 +47,7 @@
             this.tbCD = new System.Windows.Forms.TextBox();
             this.tbMI = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -222,6 +224,10 @@
             this.label7.TabIndex = 9;
             this.label7.Text = "测量时请使两线圈发生耦合";
             // 
+            // toolTip1
+            // 
+            this.toolTip1.Popup += new System.Windows.Forms.PopupEventHandler(this.toolTip1_Popup);
+            // 
             // TCCDC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -234,6 +240,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "TCCDC";
             this.Text = "特斯拉线圈耦合度计算器";
+            this.Load += new System.EventHandler(this.TCCDC_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -265,5 +272,6 @@
         private System.Windows.Forms.TextBox tbCD;
         private System.Windows.Forms.TextBox tbMI;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
