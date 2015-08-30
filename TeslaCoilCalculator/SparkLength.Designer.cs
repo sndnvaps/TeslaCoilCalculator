@@ -35,8 +35,10 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cbInch = new System.Windows.Forms.CheckBox();
-            this.cbCM = new System.Windows.Forms.CheckBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCal
@@ -93,37 +95,45 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "电源输入功率(P)(瓦特)";
             // 
-            // cbInch
+            // groupBox1
             // 
-            this.cbInch.AutoSize = true;
-            this.cbInch.Location = new System.Drawing.Point(179, 23);
-            this.cbInch.Name = "cbInch";
-            this.cbInch.Size = new System.Drawing.Size(48, 16);
-            this.cbInch.TabIndex = 6;
-            this.cbInch.Text = "英寸";
-            this.cbInch.UseVisualStyleBackColor = true;
-            this.cbInch.CheckedChanged += new System.EventHandler(this.cbInch_CheckedChanged);
+            this.groupBox1.Controls.Add(this.radioButton2);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(152, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(101, 69);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "单位";
             // 
-            // cbCM
+            // radioButton1
             // 
-            this.cbCM.AutoSize = true;
-            this.cbCM.Checked = true;
-            this.cbCM.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbCM.Location = new System.Drawing.Point(179, 45);
-            this.cbCM.Name = "cbCM";
-            this.cbCM.Size = new System.Drawing.Size(48, 16);
-            this.cbCM.TabIndex = 7;
-            this.cbCM.Text = "厘米";
-            this.cbCM.UseVisualStyleBackColor = true;
-            this.cbCM.CheckedChanged += new System.EventHandler(this.cbCM_CheckedChanged);
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(6, 20);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(47, 16);
+            this.radioButton1.TabIndex = 0;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "英寸";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(6, 42);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(47, 16);
+            this.radioButton2.TabIndex = 1;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "厘米";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // SparkLength
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.cbCM);
-            this.Controls.Add(this.cbInch);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
@@ -134,6 +144,8 @@
             this.Name = "SparkLength";
             this.Text = "估算电弧长度";
             this.Load += new System.EventHandler(this.SparkLength_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -147,7 +159,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.CheckBox cbInch;
-        private System.Windows.Forms.CheckBox cbCM;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }

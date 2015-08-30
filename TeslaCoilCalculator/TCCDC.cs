@@ -71,6 +71,7 @@ namespace TeslaCoilCalculator
             tbMI.Update();
             tbCD.Text = CD.ToString();
             tbCD.Update();
+            //MessageBox.Show("结果Y","系统提示",MessageBoxButtons.YesNo);
 
         }
 

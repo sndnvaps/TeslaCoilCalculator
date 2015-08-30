@@ -46,40 +46,33 @@ namespace TeslaCoilCalculator
 
         private void btnCal_Click(object sender, EventArgs e) //用于计算
         {
+           //用于判断GroupBox1 中 radiobox的状态 
+
+            foreach (Control ct in groupBox1.Controls)
+            {
+                RadioButton rb = ct as RadioButton;
+                if (rb.Checked)
+                {
+                    if (rb.Text.ToString().Equals("英寸"))
+                    {
+                        this.IsInch = true;
+                    } 
+
+                }
+            }
+            
+            
             //当textBox1.Text 不为空时,表示输入的为 长度,
             //但分为两种状态,一种为inch,一种为cm 
-            double power;
-
-                        
+              double power;           
               power = CalculatePower(this.SpartLength);
               textBox2.Text = power.ToString();
               textBox2.Update();             
 
         }
-
-        private void cbInch_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbInch.Checked.Equals(true))
-            {
-                cbCM.Checked = false;
-                this.IsInch = true;
-                cbCM.Update();
-            }
-        }
-
-        private void cbCM_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cbCM.Checked.Equals(true))
-            {
-                cbInch.Checked = false;
-                this.IsInch = false;
-                cbInch.Update();
-            }
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            if (textBox1.Text == null)
+            if (textBox1.Text == string.Empty)
             {
                 textBox1.Text = "0";
             }
@@ -110,7 +103,7 @@ namespace TeslaCoilCalculator
                 output = Math.Pow(Length / (1.7 * 2.54), 2.0); 
 
             }
-            
+            this.IsInch = false; //每次计算后，设置为false
 
             return output;
         }
