@@ -34,7 +34,8 @@ namespace TeslaCoilCalculator
         private Form5 NewForm5; //用于计算初始线圈的参数 
         private SparkLength NewSpartLength; //用于估算功率与电弧长度
         private TCCDC NewTCCDC; // 特斯拉线圈耦合度计算器
-        private About NewAbout; //功能说明 
+       // private About NewAbout; //功能说明 
+        //功能说明，使用MessageBox.Show()来实现
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -79,8 +80,14 @@ namespace TeslaCoilCalculator
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-            NewAbout = new About();
-            NewAbout.Show();
+           // NewAbout = new About();
+          //NewAbout.Show();
+             string Aboutstr = "\n\t(C)此软件由sndnvaps创建\n\t名称:特斯拉线圈计算器\n\t\t计算次级线圈电感&寄生电容及谐振频率\n\t\t计算初级线圈电感\n\t\t计算初级与次级的耦合度\n\t\t";
+             Aboutstr += "计算放电端寄生电容\n\t\t";
+             Aboutstr += "计算电弧长度\n\t\t";
+             Aboutstr += "\n\t版本号:1.0.X";
+            MessageBox.Show(Aboutstr,"关于本程序", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
     
